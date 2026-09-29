@@ -1376,6 +1376,19 @@ a:focus-visible {
   background: rgb(200 241 105 / 13%);
 }
 
+.contact-email {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 11px;
+  text-decoration-color: var(--accent-line);
+  text-underline-offset: 4px;
+}
+
+.contact-email:hover {
+  color: var(--accent);
+}
+
 .contact-coordinates {
   display: grid;
   gap: 11px;

@@ -11,6 +11,7 @@ const categoryLabels: Record<Project["category"], string> = {
   producto: "PRODUCTO",
   laboratorio: "LABORATORIO",
   aprendizaje: "APRENDIZAJE",
+  academico: "ACADÉMICO",
 };
 
 /**

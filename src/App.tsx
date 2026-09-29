@@ -7,6 +7,7 @@ import {
   Code2,
   Command,
   Layers3,
+  Mail,
   Menu,
   Moon,
   Sparkles,
@@ -24,6 +25,7 @@ const filters: { label: string; value: ProjectCategory | "todos" }[] = [
   { label: "Productos", value: "producto" },
   { label: "Laboratorio", value: "laboratorio" },
   { label: "Rutas de aprendizaje", value: "aprendizaje" },
+  { label: "Académicos", value: "academico" },
 ];
 
 function getInitialTheme(): "dark" | "light" {
@@ -219,8 +221,8 @@ function App() {
             <SectionHeading
               index="01"
               eyebrow="UN RECORRIDO POR MI TRABAJO"
-              title="Proyectos seleccionados"
-              subtitle="Ideas hechas código. Cada proyecto, una nueva oportunidad para resolver, aprender y mejorar."
+              title="Proyectos de mi recorrido"
+              subtitle="Desde mis primeros pasos hasta proyectos académicos y experimentos: ideas hechas código que puedes explorar."
               trailing={`${String(visibleProjects.length).padStart(2, "0")} / ${String(projects.length).padStart(2, "0")}`}
             />
 
@@ -323,17 +325,18 @@ function App() {
               <p>Las buenas ideas empiezan con una conversación. Cuéntame qué tienes en mente.</p>
               <a
                 className="button button-contact"
-                href="https://github.com/AncizarTorres19"
-                target="_blank"
-                rel="noreferrer"
+                href="mailto:ancizar.torres.dev@gmail.com?subject=Oportunidad%20laboral%20%7C%20Portafolio"
               >
-                Hablemos en GitHub
-                <ArrowUpRight size={16} />
+                Escríbeme por correo
+                <Mail size={16} />
+              </a>
+              <a className="contact-email" href="mailto:ancizar.torres.dev@gmail.com">
+                ancizar.torres.dev@gmail.com
               </a>
             </div>
             <div className="contact-coordinates" aria-hidden="true">
-              <span>CANAL&nbsp; GITHUB</span>
-              <span>PERFIL&nbsp; PÚBLICO</span>
+              <span>CANAL&nbsp; CORREO</span>
+              <span>CONTACTO LABORAL</span>
               <span>CONVERSACIÓN ABIERTA</span>
             </div>
           </section>

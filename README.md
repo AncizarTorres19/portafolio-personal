@@ -24,15 +24,15 @@ npm run preview
 
 ## Agregar o editar proyectos
 
-El contenido de `src/data/projects.ts` es la fuente de datos única de los proyectos destacados.
+El contenido de `src/data/projects.ts` es la fuente de datos única del catálogo de proyectos.
 
 1. Agrega un objeto que cumpla la interfaz `Project`.
-2. Usa un `slug` único, `category` (`producto`, `laboratorio` o `aprendizaje`) y la URL pública del repositorio.
+2. Usa un `slug` único, `category` (`producto`, `laboratorio`, `aprendizaje` o `academico`) y la URL pública del repositorio.
 3. Escribe una descripción comprobable y declara tecnologías solo si están confirmadas.
 4. Elige un `visual` para personalizar acento e ilustración; `visualIndex` y `visualLabel` personalizan el arte de tarjeta.
 5. Si la adición requiere una categoría o interacción nueva, amplía `ProjectCategory` y los filtros en `src/App.tsx`.
 
-Las tarjetas, las etiquetas, los filtros y el contador del menú se generan a partir de esa configuración.
+Las tarjetas, las etiquetas, los filtros y el contador del menú se generan a partir de esa configuración. El contacto para oportunidades laborales está en la sección de contacto y usa un enlace `mailto:`.
 
 ## Interacciones y accesibilidad
 
