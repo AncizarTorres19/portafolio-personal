@@ -28,6 +28,14 @@ const filters: { label: string; value: ProjectCategory | "todos" }[] = [
   { label: "Académicos", value: "academico" },
 ];
 
+const socials = [
+  { label: "GitHub", url: "https://github.com/AncizarTorres19" },
+  { label: "LinkedIn", url: "https://www.linkedin.com/in/ancizar-torres-lopez-673a591a1" },
+  { label: "X", url: "https://x.com/ancizardev" },
+  { label: "Instagram", url: "https://www.instagram.com/ancizar_torres19" },
+  { label: "Facebook", url: "https://www.facebook.com/share/19dm25eUx6/" },
+];
+
 function getInitialTheme(): "dark" | "light" {
   const savedTheme = localStorage.getItem("portfolio-theme");
   if (savedTheme === "light" || savedTheme === "dark") return savedTheme;
@@ -333,9 +341,16 @@ function App() {
               <a className="contact-email" href="mailto:ancizar.torres.dev@gmail.com">
                 ancizar.torres.dev@gmail.com
               </a>
+              <nav className="contact-socials" aria-label="Redes sociales">
+                {socials.map((social) => (
+                  <a key={social.label} href={social.url} target="_blank" rel="noreferrer">
+                    {social.label} <ArrowUpRight size={12} />
+                  </a>
+                ))}
+              </nav>
             </div>
             <div className="contact-coordinates" aria-hidden="true">
-              <span>CANAL&nbsp; CORREO</span>
+              <span>CORREO&nbsp; · REDES</span>
               <span>CONTACTO LABORAL</span>
               <span>CONVERSACIÓN ABIERTA</span>
             </div>
