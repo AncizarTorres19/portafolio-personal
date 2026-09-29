@@ -86,9 +86,9 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               href={project.relatedUrl}
               target="_blank"
               rel="noreferrer"
-              aria-label={`Abrir el segundo repositorio de ${project.name}`}
+              aria-label={`Abrir ${project.relatedLabel ?? "el segundo repositorio"} de ${project.name}`}
             >
-              API <Layers3 size={13} />
+              {project.relatedLabel ?? "API"} <Layers3 size={13} />
             </a>
           ) : (
             <span>{project.displayLanguage} <CodeXml size={13} /></span>

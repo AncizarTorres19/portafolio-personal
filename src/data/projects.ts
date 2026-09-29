@@ -1,6 +1,8 @@
 import {
+  Boxes,
   BrainCircuit,
   ClipboardList,
+  Container,
   CodeXml,
   Compass,
   Database,
@@ -31,6 +33,7 @@ export interface Project {
   displayLanguage: string;
   url: string;
   relatedUrl?: string;
+  relatedLabel?: string;
   year: string;
   number: string;
   visual: string;
@@ -281,5 +284,41 @@ export const projects: Project[] = [
     visualIndex: "14 — PRIMEROS PASOS",
     visualLabel: "first / build",
     icon: Smartphone,
+  },
+  {
+    slug: "curso-de-docker-fundamentos",
+    name: "Docker Fundamentos · Linktree",
+    description:
+      "Sitio de enlaces personal con frontend en nginx y API en Flask, orquestados con Docker Compose y desplegados en Azure Container Apps.",
+    category: "laboratorio",
+    kind: "DOCKER / CLOUD",
+    technologies: ["Docker", "Azure", "Flask", "nginx"],
+    displayLanguage: "Python",
+    url: "https://github.com/AncizarTorres19/curso-de-docker-fundamentos",
+    relatedUrl: "https://curso-frontend.ambitioussky-6c4af529.westus2.azurecontainerapps.io",
+    relatedLabel: "Demo",
+    year: "2026",
+    number: "15",
+    visual: "server",
+    visualIndex: "15 — CONTENEDORES",
+    visualLabel: "docker / azure",
+    icon: Container,
+  },
+  {
+    slug: "docker-avanzado",
+    name: "Docker Avanzado",
+    description:
+      "Ejercicios de Docker avanzado: multi-stage, imágenes distroless, caché de capas, volúmenes, balanceo con nginx, escaneo de imágenes y CI con GitHub Actions.",
+    category: "aprendizaje",
+    kind: "DEVOPS",
+    technologies: ["Docker", "Compose", "GitHub Actions"],
+    displayLanguage: "Dockerfile",
+    url: "https://github.com/AncizarTorres19/docker-avanzado",
+    year: "2026",
+    number: "16",
+    visual: "server",
+    visualIndex: "16 — DEVOPS",
+    visualLabel: "docker / advanced",
+    icon: Boxes,
   },
 ];
