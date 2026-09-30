@@ -1,4 +1,4 @@
-import { ArrowUpRight, Braces, CodeXml, ExternalLink, Layers3 } from "lucide-react";
+import { ArrowUpRight, Braces, CodeXml, ExternalLink, Layers3, MonitorPlay } from "lucide-react";
 import type { CSSProperties } from "react";
 import type { Project } from "../data/projects";
 
@@ -81,6 +81,17 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <a href={project.url} target="_blank" rel="noreferrer">
             Ver repositorio <ExternalLink size={13} />
           </a>
+          {project.demoUrl ? (
+            <a
+              className="project-demo"
+              href={project.demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Abrir la demo en vivo de ${project.name}`}
+            >
+              Demo en vivo <MonitorPlay size={13} />
+            </a>
+          ) : null}
           {project.relatedUrl ? (
             <a
               href={project.relatedUrl}
@@ -90,7 +101,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             >
               {project.relatedLabel ?? "API"} <Layers3 size={13} />
             </a>
-          ) : (
+          ) : null}
+          {project.relatedUrl || project.demoUrl ? null : (
             <span>{project.displayLanguage} <CodeXml size={13} /></span>
           )}
         </div>

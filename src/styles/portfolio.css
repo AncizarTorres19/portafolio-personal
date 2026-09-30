@@ -873,6 +873,14 @@ a:focus-visible {
   --card-accent: #b39cec;
 }
 
+.project-card-fitness {
+  --card-accent: #f0b35e;
+}
+
+.project-card-ar {
+  --card-accent: #6fd6c0;
+}
+
 .project-visual {
   position: relative;
   display: grid;
@@ -1173,7 +1181,8 @@ a:focus-visible {
   transition: color 150ms ease;
 }
 
-.project-card-footer a:hover {
+.project-card-footer a:hover,
+.project-card-footer .project-demo {
   color: var(--card-accent);
 }
 
