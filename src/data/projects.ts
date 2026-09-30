@@ -35,7 +35,8 @@ export interface Project {
   kind: string;
   technologies: string[];
   displayLanguage: string;
-  url: string;
+  /** Omitido cuando el repositorio es privado. */
+  url?: string;
   demoUrl?: string;
   relatedUrl?: string;
   relatedLabel?: string;
@@ -60,9 +61,7 @@ export const projects: Project[] = [
     kind: "PRODUCTO EN PRODUCCIÓN",
     technologies: ["Next.js", "NestJS", "Prisma", "Expo"],
     displayLanguage: "TypeScript",
-    url: "https://github.com/AncizarTorres19/level-up-web",
     demoUrl: "https://www.levelupcrossfit.com",
-    relatedUrl: "https://github.com/AncizarTorres19/level-up-api",
     year: "2026",
     number: "01",
     visual: "fitness",
@@ -79,7 +78,6 @@ export const projects: Project[] = [
     kind: "3D / REALIDAD AUMENTADA",
     technologies: ["Next.js", "WebXR", "Express", "PostgreSQL"],
     displayLanguage: "TypeScript",
-    url: "https://github.com/AncizarTorres19/restaurant-ar-menu",
     demoUrl: "https://ram-carta-3d-ar.vercel.app",
     year: "2026",
     number: "02",
@@ -201,7 +199,6 @@ export const projects: Project[] = [
     kind: "PROYECTO DE GRADO / WEB",
     technologies: ["Next.js", "Tailwind CSS", "TypeScript"],
     displayLanguage: "TypeScript",
-    url: "https://github.com/AncizarTorres19/Proyecto-de-Grado-Web-Front",
     demoUrl: "https://v0-proyecto-de-grado-web.vercel.app",
     year: "2025",
     number: "09",
@@ -219,7 +216,6 @@ export const projects: Project[] = [
     kind: "PRUEBA TÉCNICA",
     technologies: ["React", "Vite", "Vitest"],
     displayLanguage: "JavaScript",
-    url: "https://github.com/AncizarTorres19/marvel-challenge-prueba",
     demoUrl: "https://marvel-challenge-prueba.vercel.app",
     year: "2023",
     number: "10",

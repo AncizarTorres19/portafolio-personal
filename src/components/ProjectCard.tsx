@@ -1,4 +1,4 @@
-import { ArrowUpRight, Braces, CodeXml, ExternalLink, Layers3, MonitorPlay } from "lucide-react";
+import { ArrowUpRight, Braces, CodeXml, ExternalLink, Layers3, Lock, MonitorPlay } from "lucide-react";
 import type { CSSProperties } from "react";
 import type { Project } from "../data/projects";
 
@@ -59,10 +59,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           <span className="project-kicker"><span>{project.number}</span> {project.kind}</span>
           <a
             className="project-open"
-            href={project.url}
+            href={project.url ?? project.demoUrl}
             target="_blank"
             rel="noreferrer"
-            aria-label={`Abrir el repositorio ${project.name} en GitHub`}
+            aria-label={project.url ? `Abrir el repositorio ${project.name} en GitHub` : `Abrir la demo en vivo de ${project.name}`}
           >
             <ArrowUpRight size={16} />
           </a>
@@ -78,9 +78,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         <div className="project-card-footer">
-          <a href={project.url} target="_blank" rel="noreferrer">
-            Ver repositorio <ExternalLink size={13} />
-          </a>
+          {project.url ? (
+            <a href={project.url} target="_blank" rel="noreferrer">
+              Ver repositorio <ExternalLink size={13} />
+            </a>
+          ) : (
+            <span>Código privado <Lock size={13} /></span>
+          )}
           {project.demoUrl ? (
             <a
               className="project-demo"
